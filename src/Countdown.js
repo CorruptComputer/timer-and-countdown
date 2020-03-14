@@ -75,11 +75,55 @@ class Countdown extends Component {
     });
   };
 
-  resetCountdown = () => {
+  reset1h = () => {
     clearInterval(this.state.countdownID);
     this.setState({
       countdownHours: 1,
       countdownMinutes: 0,
+      countdownSeconds: 0,
+      countdownRunning: false,
+      countdownID: 0
+    });
+  };
+
+  reset2h = () => {
+    clearInterval(this.state.countdownID);
+    this.setState({
+      countdownHours: 2,
+      countdownMinutes: 0,
+      countdownSeconds: 0,
+      countdownRunning: false,
+      countdownID: 0
+    });
+  };
+
+  reset30m = () => {
+    clearInterval(this.state.countdownID);
+    this.setState({
+      countdownHours: 0,
+      countdownMinutes: 30,
+      countdownSeconds: 0,
+      countdownRunning: false,
+      countdownID: 0
+    });
+  };
+
+  reset15m = () => {
+    clearInterval(this.state.countdownID);
+    this.setState({
+      countdownHours: 0,
+      countdownMinutes: 15,
+      countdownSeconds: 0,
+      countdownRunning: false,
+      countdownID: 0
+    });
+  };
+
+  reset5m = () => {
+    clearInterval(this.state.countdownID);
+    this.setState({
+      countdownHours: 0,
+      countdownMinutes: 5,
       countdownSeconds: 0,
       countdownRunning: false,
       countdownID: 0
@@ -92,8 +136,14 @@ class Countdown extends Component {
         <h3>Countdown</h3>
         <p>{this.getCountdown()}</p>
         <button onClick={this.startCountdown}>Start</button>
-        <button onClick={this.stopCountdown}>Stop</button>
-        <button onClick={this.resetCountdown}>Reset</button>
+        <button onClick={this.stopCountdown}>Pause</button>
+        <div>
+          <button onClick={this.reset2h}>Reset 2h</button>
+          <button onClick={this.reset1h}>Reset 1h</button>
+          <button onClick={this.reset30m}>Reset 30m</button>
+          <button onClick={this.reset15m}>Reset 15m</button>
+          <button onClick={this.reset5m}>Reset 5m</button>
+        </div>
       </div>
     );
   }
