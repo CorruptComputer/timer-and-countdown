@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+node_js:
+  - stable
+cache:
+  bundle: true
+  directories:
+    - node_modules
+script:
+  - npm test
+  - npm run build
+after_success:
+  - git config --global user.name "Nickolas Gupton"
+  - git config --global user.email "nickolas@gupton.xyz"
+  - git remote rm origin
+  - git remote add origin https://CorruptComputer:${GITHUB_TOKEN}@github.com/CorruptComputer/timer-and-countdown.git
+  - npm run deploy
