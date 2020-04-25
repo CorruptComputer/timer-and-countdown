@@ -1,4 +1,4 @@
-# Timer and Countdown
+# Timer and Countdown [![Build Status](https://travis-ci.com/CorruptComputer/timer-and-countdown.svg?branch=master)](https://travis-ci.com/CorruptComputer/timer-and-countdown) [![dependencies Status](https://david-dm.org/CorruptComputer/timer-and-countdown/status.svg)](https://david-dm.org/CorruptComputer/timer-and-countdown)
 
 This webapp was created for me to learn React. The site can be reached at [https://nickolas.gupton.xyz/timer-and-countdown/](https://nickolas.gupton.xyz/timer-and-countdown/).
 
